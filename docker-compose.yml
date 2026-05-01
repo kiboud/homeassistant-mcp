@@ -1,0 +1,11 @@
+version: '3.8'
+
+services:
+  homeassistant-mcp:
+    build: .
+    container_name: homeassistant-mcp
+    restart: unless-stopped
+    env_file:
+      - .env
+    ports:
+      - "8000:8000"
